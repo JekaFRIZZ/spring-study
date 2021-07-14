@@ -11,5 +11,10 @@
           class="com.studyspring.RokMusic">
     </bean>
 
+    <bean id="musicPlayer"
+          class="com.studyspring.MusicPlayer">
+        <constructor-arg ref="musicBean"/>
+    </bean>
+
 
 </beans>
