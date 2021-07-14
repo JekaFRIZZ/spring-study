@@ -13,7 +13,9 @@
 
     <bean id="musicPlayer"
           class="com.studyspring.MusicPlayer">
-        <constructor-arg ref="musicBean"/>
+        <property name="music" ref="musicBean"/>
+        <property name="name" value="rok player"/>
+        <property name="volume" value="10"/>
     </bean>
 
 
