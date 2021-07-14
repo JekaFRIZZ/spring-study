@@ -12,7 +12,9 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="com.studyspring.MusicPlayer">
+          class="com.studyspring.MusicPlayer"
+          scope="prototype">
+
         <property name="music" ref="musicBean"/>
         <property name="name" value="rok player"/>
         <property name="volume" value="10"/>
