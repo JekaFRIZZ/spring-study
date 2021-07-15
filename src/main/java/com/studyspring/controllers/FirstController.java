@@ -1,6 +1,7 @@
 package com.studyspring.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -9,8 +10,9 @@ public class FirstController {
 
     @GetMapping("/hello")
     public String helloPage(@RequestParam("name") String name ,
-                            @RequestParam("surname") String surname) {
-        System.out.println("Hello " + name + " " + surname);
+                            @RequestParam("surname") String surname,
+                            Model model) {
+        model.addAttribute("message", "Hello " + name + " " + surname);
         return "first/hello";
     }
 
