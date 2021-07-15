@@ -1,7 +1,7 @@
 <html>
     <body>
         <h2>
-            Hello World!
+            Hello index!
         </h2>
     </body>
 </html>
