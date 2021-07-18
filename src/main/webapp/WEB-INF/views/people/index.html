@@ -6,9 +6,15 @@
 </head>
 <body>
 
-    <nav th:each="person : ${people}">
-      <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}"></a>
-    </nav>
+    <div th:each="person : ${people}">
+        <a th:href="@{/people/{id}(id=${person.getId()})}"
+           th:text="${person.getName() + ', ' + person.getAge()}">user</a>
+    </div>
+
+    <br/>
+    <hr/>
+
+    <a href="/people/new">Create new person</a>
 
 </body>
 </html>
